@@ -22,7 +22,7 @@ def get_pip_list_pkgs() -> list:
 
 @handle_spinner
 def get_pip_list_outdated_pkgs(debug: bool = False, spinner = None) -> list:
-    spinner.start(f" -- {color.CYELLOW2}Retrieving outdated packages{color.CEND} ...", 90)
+    spinner.start(f" -- {color.CYELLOW2}Retrieving outdated packages{color.CEND} ...", 72)
     result = subprocess.run([sys.executable, '-m', 'pip', 'list', '--outdated', '--format=json'], capture_output=True, text=True)
     spinner.stop()
     pkgList = json.loads(result.stdout)
