@@ -22,7 +22,7 @@ def get_pip_list_pkgs() -> list:
 
 @handle_spinner
 def get_pip_list_outdated_pkgs(debug: bool = False, spinner = None) -> list:
-    spinner.start(f" -- {color.CYELLOW2}Retrieving outdated packages{color.CEND} ...")
+    spinner.start(f" -- {color.CYELLOW2}Retrieving outdated packages{color.CEND} ...", 90)
     result = subprocess.run([sys.executable, '-m', 'pip', 'list', '--outdated', '--format=json'], capture_output=True, text=True)
     spinner.stop()
     pkgList = json.loads(result.stdout)
@@ -38,7 +38,7 @@ def get_pip_list_outdated_pkgs(debug: bool = False, spinner = None) -> list:
 @handle_spinner
 def upgrade_pip_pkg(pkgName: str, currVer: str, latestVer: str, debug: bool = False, spinner = None):
     spinner.start(f" -- Upgrading {color.CGREEN2}{pkgName}{color.CEND} " + \
-            f"from {color.CRED2}{currVer}{color.CEND} to {color.CGREEN}{latestVer}{color.CEND} ...")
+            f"from {color.CRED2}{currVer}{color.CEND} to {color.CGREEN}{latestVer}{color.CEND} ...", 90)
     result = subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', pkgName], capture_output=True, text=True)
     spinner.stop()
 
