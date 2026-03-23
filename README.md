@@ -15,17 +15,17 @@ pip install updapips
 The following CLI is provided in this package.
 
 ```bash
-╰─ bkmeup -h                                                                                                                             ─╯
-usage: bkmeup [-h] [--version] {show.env.info,show.dflt.bkup.list,create.archive} ...
+╰─ updapips -h                                                                                                                           ─╯
+usage: updapips [-h] [--version] {show.all.pip.pkgs,show.outdated.pip.pkgs,upgrade.pips} ...
 
--.-.-. BkMeUp Shell Config archiver & bkup!
+-.-.-. Update PIPs utility!
 
 positional arguments:
-  {show.env.info,show.dflt.bkup.list,create.archive}
-    show.env.info       show system environment info
-    show.dflt.bkup.list
-                        show list of default items to archive/bkup
-    create.archive      accumulate shell config files if they exist and archive them
+  {show.all.pip.pkgs,show.outdated.pip.pkgs,upgrade.pips}
+    show.all.pip.pkgs   show all PIP packages installed in current virt env
+    show.outdated.pip.pkgs
+                        show PIP packages in virtual env that are outdated
+    upgrade.pips        updgrade all outdated PIP pkgs
 
 options:
   -h, --help            show this help message and exit
