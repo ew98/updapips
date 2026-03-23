@@ -91,7 +91,7 @@ def cli():
                 print(f"{color.CGREEN}There are no PIP packages in this environment that need to be upgraded!{color.CEND}")
 
     except Exception as e:
-        exception_details(e, "UpDaPIPs CLI", True)
+        exception_details(e, "UpDaPIPs CLI")
 
 # ------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------

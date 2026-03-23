@@ -43,7 +43,7 @@ def upgrade_pip_pkg(pkgName: str, currVer: str, latestVer: str, debug: bool = Fa
     spinner.stop()
 
     if result.returncode:
-        print(f"{color.CRED2}Error:{color.CWHI2}{result.stderr}{color.CEND}")
+        print(f"{color.CRED2}Error:{color.CWHITE2}{result.stderr}{color.CEND}")
 
     if debug:
         print(f'STDOUT: {result.stdout}')
